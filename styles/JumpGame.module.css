@@ -1,0 +1,60 @@
+.game {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  background-color: #fff;
+  border: 2px solid #000;
+  overflow: hidden;
+}
+
+.player {
+  position: absolute;
+  bottom: 0;
+  left: 50px;
+  width: 50px;
+  height: 50px;
+  background-color: #ff0000;
+}
+
+.jump {
+  animation: jump 1s ease;
+}
+
+@keyframes jump {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 150px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+.obstacle {
+  position: absolute;
+  bottom: 0;
+  right: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: #000;
+  animation: moveObstacle 2s linear infinite;
+}
+
+@keyframes moveObstacle {
+  from {
+    right: -50px;
+  }
+  to {
+    right: 650px;
+  }
+}
+
+.score {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 20px;
+  color: #000;
+}
